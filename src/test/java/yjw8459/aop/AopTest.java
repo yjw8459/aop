@@ -9,10 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
 import yjw8459.aop.order.OrderRepository;
 import yjw8459.aop.order.OrderService;
-import yjw8459.aop.order.aop.AspectV1;
-import yjw8459.aop.order.aop.AspectV2;
-import yjw8459.aop.order.aop.AspectV3;
-import yjw8459.aop.order.aop.AspectV5Order;
+import yjw8459.aop.order.aop.*;
 
 @Slf4j
 @SpringBootTest
@@ -22,7 +19,8 @@ import yjw8459.aop.order.aop.AspectV5Order;
 //@Import(AspectV1.class)
 //@Import(AspectV2.class)
 //@Import(AspectV3.class)
-@Import({AspectV5Order.LogAspect.class, AspectV5Order.TxAspect.class})
+//@Import({AspectV5Order.LogAspect.class, AspectV5Order.TxAspect.class})
+@Import(AspectV6Advice.class)
 public class AopTest {
 
     @Autowired
